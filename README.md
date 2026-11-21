@@ -11,7 +11,7 @@
 ## 网站内容
 
 - `dist/`：完整静态网站，所有媒体均使用相对路径。
-- `dist/assets/videos/`：25 个网页播放副本；原始素材不在仓库内。
+- `dist/assets/videos/`：26 个网页播放副本；原始素材不在仓库内。
 - `dist/assets/design/`：品牌设计页面、独立项目 PDF 和完整设计合集。
 - `scripts/validate-site.cjs`：检查视频、设计及资产路径。
 
