@@ -16,6 +16,7 @@
  const baseRoute=route;
  route=()=>{
   const [name,query='']=location.hash.replace('#/','').split('?');
+  document.body.classList.toggle('design-mode',name==='works'&&new URLSearchParams(query).get('type')==='design');
   if(name!=='works'&&name!=='about'){baseRoute();return;}
   const params=new URLSearchParams(query);
   document.getElementById('home-page').hidden=true;document.getElementById('inner-page').hidden=false;
@@ -30,7 +31,7 @@
   const cats=type==='design'?designGroups:type==='video'?videoGroups:[['all','全部作品']];
   const cat=cats.some(c=>c[0]===params.get('category'))?params.get('category'):'all';
   const label=cats.find(c=>c[0]===cat)[1];
-  document.getElementById('inner-page').innerHTML=`<span class="chip">EXPLORE / ${type==='design'?'DESIGN':type==='video'?'AI VIDEO':'PORTFOLIO'}</span><h1 class="page-title">${type==='all'?'作品的不同切面。':label}</h1><p class="page-intro">${type==='design'?'以品牌为线索，浏览完整的视觉设计与应用。':'从成片到制作过程，走近每一个创意。'}</p>${type==='design'?'<a class="design-archive-link" href="assets/design/complete-portfolio.pdf" target="_blank" rel="noopener">阅读完整作品集 · 94 页</a>':''}<div class="island-type-nav"><a href="#/works" ${type==='all'?'aria-current="page"':''}>全部作品</a><a href="#/works?type=video" ${type==='video'?'aria-current="page"':''}>AI 视频</a><a href="#/works?type=design" ${type==='design'?'aria-current="page"':''}>设计作品</a></div><div class="island-category-nav">${cats.map(([key,title])=>`<a href="#/works?type=${type}&category=${key}" ${cat===key?'aria-current="page"':''}>${title}</a>`).join('')}</div><div class="project-grid" id="all-grid"></div><a class="back-to-island" href="#/">回到浮岛</a>`;
+  document.getElementById('inner-page').innerHTML=`${type==='design'&&cat==='all'?'<section class="design-portal" aria-label="AIGC视觉创意作品集封面"><img src="assets/design/portfolio-cover.webp" alt="原作品集封面：海浪、金属画框与幻想山海，AIGC视觉创意作品集" fetchpriority="high"><div class="design-portal-caption"><span>VISUAL CREATIVE PORTFOLIO</span><span>裴继豪 / JACK · 2026</span></div></section>':''}<span class="chip">EXPLORE / ${type==='design'?'DESIGN':type==='video'?'AI VIDEO':'PORTFOLIO'}</span><h1 class="page-title">${type==='all'?'作品的不同切面。':label}</h1><p class="page-intro">${type==='design'?'以品牌为线索，浏览完整的视觉设计与应用。':'从成片到制作过程，走近每一个创意。'}</p>${type==='design'?'<a class="design-archive-link" href="assets/design/complete-portfolio.pdf" target="_blank" rel="noopener">阅读完整作品集 · 94 页</a>':''}<div class="island-type-nav"><a href="#/works" ${type==='all'?'aria-current="page"':''}>全部作品</a><a href="#/works?type=video" ${type==='video'?'aria-current="page"':''}>AI 视频</a><a href="#/works?type=design" ${type==='design'?'aria-current="page"':''}>设计作品</a></div><div class="island-category-nav">${cats.map(([key,title])=>`<a href="#/works?type=${type}&category=${key}" ${cat===key?'aria-current="page"':''}>${title}</a>`).join('')}</div><div class="project-grid" id="all-grid"></div><a class="back-to-island" href="#/">回到浮岛</a>`;
   renderGrid('all-grid',type,cat);window.scrollTo({top:0,behavior:'instant'});
  };
  route();
