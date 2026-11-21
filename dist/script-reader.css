@@ -1,0 +1,8 @@
+.script-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px 0;font-size:14px;color:var(--ink2)}
+.script-toolbar>div{display:flex;gap:6px}.script-toolbar button{min-height:40px;padding:8px 12px;border:1px solid #a6b69b;border-radius:4px;background:transparent;font-size:14px}.script-toolbar button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.script-text.script-reader{--script-font:13px;max-height:65svh;overflow:auto;overscroll-behavior:contain;padding:0 16px 16px;border:1px solid #c4cfbb;border-radius:6px;background:#fafbf8;scrollbar-gutter:stable;scrollbar-width:auto;line-height:1.8}
+.script-reader .doc-paragraph{font-size:var(--script-font);line-height:1.9;white-space:pre;word-break:normal;overflow-wrap:normal;margin:12px 0;color:#2d4032}
+.script-reader .doc-heading{white-space:nowrap;font-size:calc(var(--script-font) + 3px);font-weight:600;margin:24px 0 14px;color:var(--ink)}
+.script-table{border-collapse:separate;border-spacing:0;min-width:100%;width:max-content;margin:18px 0 28px;font-size:var(--script-font);line-height:1.8;text-align:left;background:#fafbf8}
+.script-table th,.script-table td{white-space:pre;word-break:normal;overflow-wrap:normal;vertical-align:top;padding:10px 14px;border-bottom:1px solid #d7dfd0;border-right:1px solid #e0e6db}
+.script-table th{position:sticky;top:0;z-index:1;background:#dfe9d5;font-weight:600;color:var(--ink);border-top:1px solid #c4cfbb}.script-table tbody tr:nth-child(even) td{background:#eff3ea}.script-table tbody tr:hover td{background:#e4eddc}.script-reader:focus-visible{outline:3px solid #577e39;outline-offset:3px}
