@@ -5,18 +5,18 @@
 .island-home .closing{display:none!important}
 .island-home{overscroll-behavior-y:none}
 .hotspot-link{gap:12px;min-height:76px;padding:4px;border-radius:12px}
-.island-leaf{width:72px;height:72px;flex:0 0 72px;overflow:visible;filter:drop-shadow(0 5px 8px #17392735);transform-origin:50% 90%;transition:transform .35s cubic-bezier(.2,.8,.2,1),filter .3s}
+.island-leaf{width:80px;height:80px;flex:0 0 80px;object-fit:contain;opacity:1;filter:drop-shadow(0 5px 8px #17392735);transform-origin:50% 90%;transition:transform .35s cubic-bezier(.2,.8,.2,1),filter .3s}
 .leaf-fill{fill:var(--leaf-color);stroke:var(--leaf-edge);stroke-width:1.1;stroke-linejoin:round}
 .leaf-vein{fill:none;stroke:var(--leaf-vein);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
 .leaf-plane{--leaf-color:#71c5bc;--leaf-edge:#29766b;--leaf-vein:#205e57}
 .leaf-maple{--leaf-color:#ed9264;--leaf-edge:#a55b3f;--leaf-vein:#854b37}
 .leaf-ginkgo{--leaf-color:#ebce63;--leaf-edge:#a28b35;--leaf-vein:#7b6a2f}
 .leaf-lotus{--leaf-color:#99cf74;--leaf-edge:#4d8248;--leaf-vein:#416d3c}
-.hotspot-link span{font-size:18px;padding:13px 17px;background:#f7f8f0e6;border:1px solid #ffffff94;border-radius:6px;box-shadow:0 5px 22px #1b352015;transition:background .25s,transform .25s}
+.hotspot-link span{font-size:18px;padding:13px 17px;background:rgba(247,248,240,.8);border:1px solid #ffffff94;border-radius:6px;box-shadow:0 5px 22px #1b352015;transition:background .25s,transform .25s}
 .hotspot-link small{font-size:10px;letter-spacing:1.1px;padding-top:7px}
 .hotspot-link:hover .island-leaf,.hotspot-link:focus-visible .island-leaf{transform:translateY(-5px) rotate(-9deg) scale(1.09);filter:drop-shadow(0 9px 10px #17392750)}
-.hotspot-link:hover span,.hotspot-link:focus-visible span{background:#fffef3;transform:translateX(3px)}
-.h4{left:auto;right:6%}
+.hotspot-link:hover span,.hotspot-link:focus-visible span{background:rgba(255,254,243,.9);transform:translateX(3px)}
+.h1{left:28%;top:60%}.h2{left:43%;top:43%}.h3{left:57%;top:68%}.h4{left:66%;right:auto;top:48%}
 .portfolio-worlds{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:48px}
 .portfolio-world{min-height:360px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:36px;border-radius:10px;overflow:hidden;isolation:isolate;transition:transform .3s}
 .portfolio-world:hover{transform:translateY(-5px)}
@@ -28,7 +28,7 @@
 html:has(dialog[open]){overflow:hidden}
 @media(max-width:820px){
  .island-leaf{width:54px;height:54px;flex-basis:54px}.hotspot-link{gap:6px;padding:2px;min-height:62px}.hotspot-link span{font-size:15px;padding:10px 12px}.hotspot-link small{font-size:8px;letter-spacing:.4px;padding-top:5px}
- .h1{left:4%;top:52%}.h2{left:43%;top:40%}.h3{left:40%;top:67%}.h4{left:5%;right:auto;top:81%}.cap-copy{top:12%}.cap-copy h2{font-size:26px}.cap-copy .chip{font-size:8px}#cap-description{display:none}
+ .h1{left:12%;top:53%}.h2{left:42%;top:42%}.h3{left:43%;top:64%}.h4{left:14%;right:auto;top:75%}.cap-copy{top:12%}.cap-copy h2{font-size:26px}.cap-copy .chip{font-size:8px}#cap-description{display:none}
  .portfolio-worlds{grid-template-columns:1fr;margin-top:32px;gap:20px}.portfolio-world{min-height:300px;padding:28px}.portfolio-world h2{font-size:34px}
  .contact-modal{width:calc(100% - 24px);padding:40px 22px 30px}.contact-modal h2{font-size:28px}.contact-modal .contact-row{gap:12px;font-size:15px}.contact-modal .contact-values{font-size:14px}.contact-invite-title{font-size:28px}
 }
