@@ -45,8 +45,20 @@
   player.addEventListener('click',e=>{const r=player.getBoundingClientRect();if(e.clientY>r.bottom-48)return;e.preventDefault();if(player.paused)player.play().catch(()=>{});else player.pause();});
   player.addEventListener('error',()=>{dialog.querySelector('.playback-message').hidden=false});
   player.addEventListener('loadedmetadata',()=>player.classList.toggle('is-portrait',player.videoHeight>player.videoWidth));
-  document.querySelectorAll('[data-section]').forEach(b=>b.onclick=()=>document.getElementById(b.dataset.section).scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'}));
-  dialog.showModal();dialog.scrollTop=0;if(trigger.dataset.mode==='process')requestAnimationFrame(()=>document.getElementById('making-of').scrollIntoView());else{document.getElementById('finished-film').scrollIntoView({block:'start'});player.play().catch(()=>{});}
+  function selectVideoView(section){
+   const process=section==='making-of';
+   dialog.dataset.view=process?'process':'watch';
+   dialog.querySelector('#finished-film').hidden=process;
+   dialog.querySelector('.story-synopsis').hidden=process;
+   dialog.querySelector('.responsibilities').hidden=!process;
+   dialog.querySelector('#making-of').hidden=!process;
+   dialog.querySelectorAll('[data-section]').forEach(b=>{const selected=b.dataset.section===section;b.setAttribute('aria-pressed',String(selected));b.setAttribute('aria-controls',b.dataset.section);b.classList.toggle('dark',selected);});
+   dialog.scrollTop=0;
+   if(process)player.pause();else player.play().catch(()=>{});
+  }
+  dialog.querySelectorAll('[data-section]').forEach(b=>b.onclick=()=>selectVideoView(b.dataset.section));
+  selectVideoView(trigger.dataset.mode==='process'?'making-of':'finished-film');
+  dialog.showModal();dialog.scrollTop=0;
  });
  dialog.addEventListener('close',()=>{dialog.classList.remove('design-dialog');const player=dialog.querySelector('video');if(player){player.pause();player.removeAttribute('src');player.load();}});
  renderGrid('home-grid');if(document.getElementById('all-grid'))renderGrid('all-grid');
