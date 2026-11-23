@@ -12,6 +12,7 @@ http.createServer((req,res)=>{
  }
  let file;try{file=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname))}catch{res.writeHead(400).end();return}
  if(file===root)file=path.join(root,'index.html');if(!file.startsWith(root+path.sep)){res.writeHead(403).end();return}
+ if(url.pathname.endsWith('/')&&path.extname(file)!=='.html')file=path.join(file,'index.html');
  fs.stat(file,(err,stat)=>{
   if(err||!stat.isFile()){res.writeHead(404).end();return}
   if(path.extname(file)==='.html'){

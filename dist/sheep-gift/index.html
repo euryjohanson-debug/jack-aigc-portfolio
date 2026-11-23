@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="岁启羊年，以温柔为礼。羊年礼盒视觉提案 · 裴继豪 PEI AIGC 作品集">
+<title>品牌策划 · 岁启羊年 — PEI 作品集</title>
+<style>
+:root{
+  --paper:#f6f7f4;
+  --paper-2:#eef2eb;
+  --paper-3:#e7ebe8;
+  --moss:#10291a;
+  --moss-2:#3d5143;
+  --sage:#647267;
+  --lime:#c6f35c;
+  --line:rgba(16,41,26,.12);
+  --line-strong:rgba(16,41,26,.24);
+  --shadow:0 18px 50px rgba(16,41,26,.07);
+  --font:"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--moss);
+  font-family:var(--font);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.75;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+
+/* ---------- 导航 ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  height:66px;display:flex;align-items:center;
+  background:rgba(246,247,244,.88);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{
+  width:100%;max-width:var(--max);margin:0 auto;padding:0 28px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.logo{font-size:19px;font-weight:800;letter-spacing:-.03em}
+.logo span{color:var(--sage);font-weight:400}
+.nav-links{display:flex;align-items:center;gap:30px;font-size:12px;letter-spacing:.04em}
+.nav-links a{color:var(--moss-2);transition:color .2s}
+.nav-links a:hover{color:var(--moss)}
+.nav-links .star{color:var(--moss);font-weight:700}
+@media(max-width:640px){.nav-links{gap:16px;font-size:11px}.nav-links .hide-sm{display:none}}
+
+/* ---------- 通用 ---------- */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.label{
+  font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--sage);display:flex;align-items:center;gap:10px;margin:0 0 22px;
+}
+.label::before{content:"＋";color:var(--moss);font-size:15px;line-height:1}
+h1,h2,h3{margin:0;font-weight:650;letter-spacing:-.02em;line-height:1.22}
+p{margin:0 0 1em}
+.plus{color:var(--moss)}
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  padding:88px 0 96px;
+  background:
+    radial-gradient(760px 460px at 78% 34%,rgba(198,243,92,.13),transparent 70%),
+    radial-gradient(900px 620px at 8% 92%,rgba(100,114,103,.10),transparent 72%);
+}
+.hero::after{
+  content:"";position:absolute;right:-120px;top:-140px;width:420px;height:420px;
+  border:1px solid var(--line);border-radius:50%;pointer-events:none;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:center;
+}
+.eyebrow{
+  font-size:11px;letter-spacing:.24em;color:var(--sage);text-transform:uppercase;
+  margin-bottom:26px;display:flex;align-items:center;gap:12px;
+}
+.eyebrow i{display:block;width:28px;height:1px;background:var(--line-strong)}
+.hero h1{font-size:clamp(42px,5.2vw,74px);letter-spacing:-.045em;line-height:1.14}
+.hero h1 em{font-style:normal;color:var(--moss-2)}
+.en-title{
+  margin-top:22px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);
+}
+.lead{
+  margin-top:34px;max-width:460px;font-size:16px;line-height:1.9;color:var(--moss-2);
+}
+.meta{
+  margin-top:36px;padding-top:22px;border-top:1px solid var(--line);
+  display:flex;gap:26px;flex-wrap:wrap;font-size:11px;letter-spacing:.14em;color:var(--sage);
+}
+.scroll-cue{
+  margin-top:44px;display:inline-flex;align-items:center;gap:10px;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--moss);
+}
+.scroll-cue b{
+  display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  border:1px solid var(--line-strong);font-weight:400;font-size:13px;
+}
+.hero-visual{position:relative;display:flex;justify-content:center}
+.hero-visual img{
+  width:100%;max-width:470px;border-radius:3px;box-shadow:var(--shadow);
+  background:var(--paper-3);
+}
+.hero-visual .tag{
+  position:absolute;left:-6px;bottom:26px;background:var(--paper);
+  border:1px solid var(--line);padding:10px 14px;font-size:10px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--sage);
+}
+@media(max-width:860px){
+  .hero{padding:58px 0 72px}
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .hero-visual{order:-1}
+  .hero-visual img{max-width:100%}
+  .hero-visual .tag{left:10px;bottom:12px}
+}
+
+/* ---------- 概念 ---------- */
+.section{padding:104px 0}
+.section.alt{background:var(--paper-2)}
+.section-head{max-width:680px;margin-bottom:56px}
+.section-head h2{font-size:clamp(30px,3.4vw,48px)}
+.section-head .sub{margin-top:18px;color:var(--sage);font-size:14px;letter-spacing:.04em}
+.concept-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:start}
+.copy-block{border-left:2px solid var(--lime);padding-left:26px}
+.copy-block .t{font-size:22px;font-weight:650;margin-bottom:26px;letter-spacing:-.02em}
+.copy-block p{font-size:15px;line-height:2;color:var(--moss-2);margin-bottom:20px}
+.kv{background:var(--paper);border:1px solid var(--line);padding:30px}
+.kv .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);margin-bottom:20px}
+.kv ul{list-style:none;margin:0;padding:0}
+.kv li{
+  display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+  padding:13px 0;border-bottom:1px solid var(--line);font-size:14px;
+}
+.kv li:last-child{border-bottom:0;padding-bottom:0}
+.kv li span{color:var(--sage);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:860px){.concept-grid{grid-template-columns:1fr;gap:38px}.section{padding:76px 0}}
+
+/* ---------- 思路卡片 ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{
+  background:var(--paper);border:1px solid var(--line);padding:28px 26px 30px;
+  position:relative;transition:transform .25s ease,border-color .25s ease;
+}
+.card:hover{transform:translateY(-4px);border-color:var(--line-strong)}
+.card::before{
+  content:"";position:absolute;left:0;top:0;width:0;height:2px;background:var(--lime);
+  transition:width .3s ease;
+}
+.card:hover::before{width:100%}
+.card .n{font-size:11px;letter-spacing:.18em;color:var(--sage);margin-bottom:22px}
+.card h3{font-size:18px;margin-bottom:12px}
+.card p{font-size:13.5px;line-height:1.9;color:var(--moss-2);margin:0}
+@media(max-width:980px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.cards{grid-template-columns:1fr}}
+
+/* ---------- 画廊 ---------- */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.figure{margin:0}
+.figure img{
+  width:100%;border-radius:2px;background:var(--paper-3);cursor:zoom-in;
+  transition:opacity .25s ease;
+}
+.figure img:hover{opacity:.94}
+.figure figcaption{
+  margin-top:12px;display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+  font-size:12px;color:var(--sage);
+}
+.figure figcaption b{color:var(--moss);font-weight:600}
+.figure.wide{grid-column:1/-1;max-width:600px;margin:0 auto 22px;text-align:center}
+.figure.wide figcaption{justify-content:center}
+@media(max-width:640px){.gallery{grid-template-columns:1fr;gap:26px}}
+
+/* ---------- 灯箱 ---------- */
+.lb{
+  position:fixed;inset:0;z-index:100;display:none;place-items:center;
+  background:rgba(16,41,26,.82);padding:32px;cursor:zoom-out;
+}
+.lb.on{display:grid}
+.lb img{max-width:min(90vw,820px);max-height:88vh;object-fit:contain;box-shadow:0 24px 80px rgba(0,0,0,.3)}
+.lb .close{
+  position:absolute;top:22px;right:26px;color:#f6f7f4;font-size:26px;
+  width:38px;height:38px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.35);border-radius:50%;
+}
+
+/* ---------- 页脚 ---------- */
+.footer{border-top:1px solid var(--line);padding:56px 0 44px}
+.footer-in{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.footer .big{font-size:30px;font-weight:800;letter-spacing:-.04em;line-height:1}
+.footer .small{margin-top:14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
+.footer .contact{font-size:13px;color:var(--moss-2)}
+.footer .contact b{color:var(--moss)}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+.lb button{border:0;cursor:pointer}.lb .close{background:transparent;color:white}.album-step{position:absolute;top:50%;transform:translateY(-50%);font-size:40px;background:#10291acb;color:white;width:44px;height:60px;border-radius:6px}.album-step.prev{left:16px}.album-step.next{right:16px}.album-step:disabled{opacity:.3}#albumCount{position:absolute;top:20px;left:50%;transform:translateX(-50%);color:white;font-size:14px}.lb.on{overflow:auto}</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <a class="logo" href="../#/">PEI<span>.</span></a>
+    <div class="nav-links">
+      <a class="hide-sm" href="../#/">首页 HOME</a>
+      <a href="../#/works?type=design">作品集 WORK</a>
+      <a class="hide-sm" href="../#/about">关于我 ABOUT</a>
+      <a class="star" href="../#/contact">联系我</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow"><i></i>SELECTED WORK / 2026</div>
+      <h1>岁启羊年，<br><em>以温柔为礼。</em></h1>
+      <div class="en-title">THE SHEEP GIFT · A SOFT NEW YEAR</div>
+      <p class="lead">把生肖的吉祥寓意，做成一朵可以捧在手里的云。<br>从文化符号到盒型结构，让新年的祝福变得轻盈、亲近。</p>
+      <div class="meta">
+        <span>CONCEPT 创意与策划</span>
+        <span>VISUAL 视觉与资产</span>
+        <span>FINISH 设计与交付</span>
+      </div>
+      <a class="scroll-cue" href="#concept"><b>↓</b> SCROLL TO EXPLORE</a>
+    </div>
+    <div class="hero-visual reveal">
+      <img src="images/sheep-gift-01.webp" alt="红色云朵形礼盒与小羊符号主视觉" width="592" height="788" fetchpriority="high">
+      <div class="tag">THE SHEEP GIFT BOX</div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="concept">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="label">THE CONCEPT</p>
+      <h2>从一个谐音，<br>到一套礼盒。</h2>
+      <p class="sub">FROM CONCEPT TO CREATION</p>
+    </div>
+    <div class="concept-grid">
+      <div class="copy-block reveal">
+        <div class="t">想法，没有边界。<br>创作，让它发生。</div>
+        <p>羊，古通“祥”，是传统吉祥符号，寓意吉祥和顺、万事洋洋。区别于厚重传统国风，我们塑造一只简约治愈的小羊形象，剥离刻板生肖，力求年轻化、有温度的生肖IP。</p>
+        <p>从绵羊柔软蓬松的形态汲取灵感，把礼盒塑成一朵舒展的云。没有凌厉的棱角，用圆润起伏的轮廓，传递松弛、安然的新年期许。盒型打破常规方正结构，采用云朵花瓣异形轮廓，呼应羊毛蓬松温柔的形态，弱化礼盒的距离感。</p>
+      </div>
+      <aside class="kv reveal">
+        <div class="k">KEYWORDS / 关键词</div>
+        <ul>
+          <li>文化转译 <span>羊 → 祥</span></li>
+          <li>IP 形象 <span>简约治愈</span></li>
+          <li>盒型结构 <span>云朵花瓣</span></li>
+          <li>色彩系统 <span>深红 / 奶油白</span></li>
+          <li>情绪基调 <span>松弛 · 安然</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="approach">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="label">THE APPROACH</p>
+      <h2>让形态，自己说话。</h2>
+      <p class="sub">六种设计决策，把“温柔”从形容词变成看得见的结构。</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal"><div class="n">01 / CULTURE</div><h3>文化符号的轻量化转译</h3><p>不堆砌传统纹样，抓住“祥”的情绪内核，把吉祥寓意转译成年轻人一眼能读懂的小羊形象。</p></article>
+      <article class="card reveal"><div class="n">02 / CHARACTER</div><h3>IP 形象的减法设计</h3><p>用极简轮廓与少量五官完成识别，剥离刻板生肖的视觉包袱，让形象能延展到各种物料载体。</p></article>
+      <article class="card reveal"><div class="n">03 / STRUCTURE</div><h3>盒型即内容</h3><p>云朵与花瓣的异形轮廓来自羊毛蓬松柔软的联想，把文字里的形容词变成可以拿在手里的结构。</p></article>
+      <article class="card reveal"><div class="n">04 / COLOR</div><h3>色彩与材质的情绪控制</h3><p>深红承担年味，奶油白负责呼吸感，暖粉背景与浅金文字补足层次，让礼盒有温度却不喧闹。</p></article>
+      <article class="card reveal"><div class="n">05 / SYSTEM</div><h3>文字系统的品牌化</h3><p>THE SHEEP GIFT 定义产品，KINDNESS 定义情绪。两组英文贯穿物料，建立可识别的品牌语调。</p></article>
+      <article class="card reveal"><div class="n">06 / NARRATIVE</div><h3>陈列即叙事</h3><p>从符号、盒型到完整礼赠场景，七张画面形成清晰动线，让访客理解从想法到视觉方案的创作过程。</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="label">THE GALLERY</p>
+      <h2>从符号，<br>到一个完整世界。</h2>
+      <p class="sub">SELECTED VISUALS / 7 FRAMES</p>
+    </div>
+    <div class="gallery">
+      <figure class="figure wide reveal">
+        <img src="images/sheep-gift-01.webp" alt="红色云朵形礼盒盖与小羊符号" width="592" height="788" loading="lazy">
+        <figcaption><b>01</b><span>云朵盒盖 · 小羊符号 · THE SHEEP GIFT</span></figcaption>
+      </figure>
+      <figure class="figure reveal"><img src="images/sheep-gift-02.webp" alt="红色礼盒与礼袋配件" width="592" height="788" loading="lazy"><figcaption><b>02</b><span>礼盒 · 礼袋 · 卡片</span></figcaption></figure>
+      <figure class="figure reveal"><img src="images/sheep-gift-03.webp" alt="红白两款云朵盒与礼袋组合" width="592" height="792" loading="lazy"><figcaption><b>03</b><span>KINDNESS · 双色云朵盒</span></figcaption></figure>
+      <figure class="figure reveal"><img src="images/sheep-gift-04.webp" alt="小羊符号特写" width="592" height="788" loading="lazy"><figcaption><b>04</b><span>符号细节 · 红白对比</span></figcaption></figure>
+      <figure class="figure reveal"><img src="images/sheep-gift-05.webp" alt="红色礼盒整体陈列" width="592" height="788" loading="lazy"><figcaption><b>05</b><span>产品主图 · 整体陈列</span></figcaption></figure>
+      <figure class="figure reveal"><img src="images/sheep-gift-06.webp" alt="礼盒品牌文字细节" width="592" height="788" loading="lazy"><figcaption><b>06</b><span>品牌文字 · 浅金工艺</span></figcaption></figure>
+      <figure class="figure reveal"><img src="images/sheep-gift-07.webp" alt="礼袋与卡片俯拍组合" width="592" height="792" loading="lazy"><figcaption><b>07</b><span>物料系统 · 俯拍组合</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <div>
+      <div class="big">PEI.</div>
+      <div class="small">AIGC CREATIVE PORTFOLIO · © 2026</div>
+    </div>
+    <div class="contact">下一个创意，期待与你一起完成。<br><a href="../#/contact"><b>联系我</b></a></div>
+  </div>
+</footer>
+
+<div class="lb" id="lightbox" aria-hidden="true">
+  <button type="button" class="close" id="lbClose" aria-label="关闭图片">×</button><button type="button" class="album-step prev" aria-label="上一张图片">‹</button><button type="button" class="album-step next" aria-label="下一张图片">›</button><span id="albumCount" aria-live="polite"></span>
+  <img id="lbImg" src="" alt="">
+</div>
+
+<script>
+document.body.classList.add('js');
+
+// 滚动淡入
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+// 图片点击放大
+var lb = document.getElementById('lightbox');
+var lbImg = document.getElementById('lbImg');
+var album=Array.from(document.querySelectorAll('.figure img')),albumIndex=0;
+function showImage(i){if(i<0||i>=album.length)return;albumIndex=i;lbImg.src=album[i].src;lbImg.alt=album[i].alt;document.getElementById('albumCount').textContent=(i+1)+' / '+album.length;lb.querySelector('.prev').disabled=i===0;lb.querySelector('.next').disabled=i===album.length-1;}
+album.forEach(function(img,i){img.addEventListener('click',function(){showImage(i);lb.classList.add('on');lb.setAttribute('aria-hidden','false');document.getElementById('lbClose').focus();});});
+lb.querySelector('.prev').onclick=function(){showImage(albumIndex-1)};lb.querySelector('.next').onclick=function(){showImage(albumIndex+1)};
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();showImage(albumIndex+(e.key==='ArrowLeft'?-1:1));}});
+function closeLb(){
+  lb.classList.remove('on');
+  lb.setAttribute('aria-hidden','true');
+  lbImg.src = '';
+}
+document.getElementById('lbClose').addEventListener('click',closeLb);
+lb.addEventListener('click',function(e){ if(e.target===lb) closeLb(); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeLb(); });
+</script>
+</body>
+</html>
