@@ -9,3 +9,14 @@ let count=0;for(const p of [...c.window.localProjects,...c.window.designProjects
 for(let i=1;i<=61;i++)exists('assets/island-frames/frame-'+String(i).padStart(3,'0')+'.webp');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');for(const m of html.matchAll(/(?:src|href)="([^"#]+)"/g)){const ref=m[1].split('?')[0];if(!/^https?:/.test(ref))exists(ref)}
 console.log(`Validated ${c.window.localProjects.length} videos, ${c.window.designProjects.length} design projects and ${count} production images.`);
+
+// The website's design selection is tied to the final PDF edition.
+const manifestPath=path.join(root,'assets/design/portfolio-manifest.json');
+if(fs.existsSync(manifestPath)){
+ const crypto=require('node:crypto'),manifest=JSON.parse(fs.readFileSync(manifestPath,'utf8'));
+ const hash=file=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex');
+ if(hash(manifest.portfolioPdf)!==manifest.portfolioSha256)throw Error('Portfolio PDF changed: synchronize the website selection and manifest before publishing');
+ if(JSON.stringify(c.window.designProjects.map(p=>p.id))!==JSON.stringify(manifest.projects.map(p=>p.id)))throw Error('Website design projects differ from the PDF edition');
+ for(const expected of manifest.projects){const actual=c.window.designProjects.find(p=>p.id===expected.id);const items=actual.sections.flatMap(s=>s.items);if(actual.title!==expected.title||JSON.stringify(items.map(x=>[x.src,x.title]))!==JSON.stringify(expected.items.map(x=>[x.src,x.title])))throw Error('Design selection differs from PDF manifest: '+expected.id);for(const item of expected.items)if(hash(item.src)!==item.sha256)throw Error('Artwork changed: update PDF and website together: '+item.src);}
+ console.log('Verified design selection and asset hashes against the final PDF edition.');
+}

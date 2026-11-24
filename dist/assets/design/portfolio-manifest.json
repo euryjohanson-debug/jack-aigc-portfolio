@@ -1,0 +1,636 @@
+{
+  "edition": "40页精排版 / 2026-11-24",
+  "portfolioPdf": "assets/design/brand-collection-2026.pdf",
+  "portfolioSha256": "34d75fcad70f9bf916bcada691ef68c51442ddb7c3a8efabc17f70e7948fe357",
+  "projects": [
+    {
+      "id": "poster-commercial",
+      "title": "海报设计 · 商品与创意",
+      "category": "poster",
+      "portfolioPages": [
+        4
+      ],
+      "pdf": "assets/design/collections/poster-commercial/collection.pdf",
+      "items": [
+        {
+          "src": "assets/design/collections/poster-commercial/art-01.webp",
+          "title": "春日茶饮海报",
+          "width": 810,
+          "height": 1440,
+          "sha256": "66d30cedba5cbba234a6b810b99e8674070fdee3c2c18cdeebdd5241a4d1f785"
+        },
+        {
+          "src": "assets/design/collections/poster-commercial/art-02.webp",
+          "title": "男士香水海报",
+          "width": 810,
+          "height": 1440,
+          "sha256": "24523e5efe9eb7ba582a85f2577c09ba4e2a1743659bb1b6845e7ccd3a4e59d2"
+        },
+        {
+          "src": "assets/design/collections/poster-commercial/art-03.webp",
+          "title": "个性问卷宣传海报",
+          "width": 810,
+          "height": 1440,
+          "sha256": "bde80fe71e187ca8adf9544eebb92aa477b3b616f4a660cef0f53fa8eee7866d"
+        },
+        {
+          "src": "assets/design/collections/poster-commercial/art-04.webp",
+          "title": "字母拼贴 · 鲨鱼主题海报",
+          "width": 810,
+          "height": 1440,
+          "sha256": "d94ee67cf825428c630cc08c21915e7e96f9dc43767549b630a3e3bb035f568c"
+        }
+      ]
+    },
+    {
+      "id": "poster-campaign",
+      "title": "海报设计 · 节日与活动",
+      "category": "poster",
+      "portfolioPages": [
+        5
+      ],
+      "pdf": "assets/design/collections/poster-campaign/collection.pdf",
+      "items": [
+        {
+          "src": "assets/design/collections/poster-campaign/art-01.webp",
+          "title": "医美活动海报",
+          "width": 810,
+          "height": 1752,
+          "sha256": "0403cd5673b87cec6c49302785ddb9ecbaecc730108c2003cc2dc69fb8837cb4"
+        },
+        {
+          "src": "assets/design/collections/poster-campaign/art-02.webp",
+          "title": "中秋主题海报",
+          "width": 810,
+          "height": 1752,
+          "sha256": "e5f18c9f4f9d524b86733150324e27e67dd001db5fca9c78b67350fda2c0c657"
+        },
+        {
+          "src": "assets/design/collections/poster-campaign/art-03.webp",
+          "title": "人生是旷野 · 主题海报",
+          "width": 810,
+          "height": 1752,
+          "sha256": "556b370b37429e9383ac1c5887fe04338e57dd9c61a48659312ab1270ac4ee6c"
+        },
+        {
+          "src": "assets/design/collections/poster-campaign/art-04.webp",
+          "title": "蜜桃乌龙冰淇淋海报",
+          "width": 810,
+          "height": 1752,
+          "sha256": "55d112cf0b6c0ea729285dc6f4d1a5c3741fc3dadfce61a7cb3be8b7a2ce3741"
+        }
+      ]
+    },
+    {
+      "id": "banner-design",
+      "title": "横幅设计",
+      "category": "banner",
+      "portfolioPages": [
+        6
+      ],
+      "pdf": "assets/design/collections/banner-design/collection.pdf",
+      "items": [
+        {
+          "src": "assets/design/collections/banner-design/art-01.webp",
+          "title": "家居促销横幅",
+          "width": 1020,
+          "height": 433,
+          "sha256": "caf6582dc48715c8d2321276545250b4963d994f3fbec865abb817d06dd33e58"
+        },
+        {
+          "src": "assets/design/collections/banner-design/art-02.webp",
+          "title": "室内空间横幅",
+          "width": 1020,
+          "height": 433,
+          "sha256": "a1839e23da9bf376f8152caaac5b34113f3529bddee59ae3c1d38421829f4e05"
+        },
+        {
+          "src": "assets/design/collections/banner-design/art-03.webp",
+          "title": "户外服饰横幅",
+          "width": 1020,
+          "height": 433,
+          "sha256": "8c6ccd393d7d2fb33dad4bea5f984afd0693b55966ca27e4298173f064f5b56e"
+        },
+        {
+          "src": "assets/design/collections/banner-design/art-04.webp",
+          "title": "美妆产品横幅",
+          "width": 1020,
+          "height": 433,
+          "sha256": "46c1cd104383bc02c20544796550ba35a1afa8f5525a84103a62017bd09aacda"
+        }
+      ]
+    },
+    {
+      "id": "typography-design",
+      "title": "字体设计",
+      "category": "type",
+      "portfolioPages": [
+        7,
+        8
+      ],
+      "pdf": "assets/design/collections/typography-design/collection.pdf",
+      "items": [
+        {
+          "src": "assets/design/collections/typography-design/art-01.webp",
+          "title": "如虎添翼",
+          "width": 1020,
+          "height": 573,
+          "sha256": "cee0e648317cc820b69f63728edc830e25926f5455a105aeb760f517d57932a4"
+        },
+        {
+          "src": "assets/design/collections/typography-design/art-02.webp",
+          "title": "未来已来",
+          "width": 1020,
+          "height": 573,
+          "sha256": "f21b54d94c7d51f3d0db7f28c687f926a7a29b716402439b69352be21992106f"
+        },
+        {
+          "src": "assets/design/collections/typography-design/art-03.webp",
+          "title": "无限力量 · 黑白",
+          "width": 1020,
+          "height": 573,
+          "sha256": "16c5cba7ba62feedb6c353bc75b55b3051818e1c3b2ce288c9c0f12b52ce66a5"
+        },
+        {
+          "src": "assets/design/collections/typography-design/art-04.webp",
+          "title": "无限力量 · 红色",
+          "width": 1020,
+          "height": 573,
+          "sha256": "2252238b1abd29b8bb4470d30af69f61b7d9f024dbbd3e90e46b4fad2eebc1af"
+        },
+        {
+          "src": "assets/design/collections/typography-design/art-05.webp",
+          "title": "小满",
+          "width": 750,
+          "height": 1125,
+          "sha256": "23a4db2f7c2b52a736234823e842a905ae52915a10d5cc403d6ac0f00b9f5966"
+        },
+        {
+          "src": "assets/design/collections/typography-design/art-06.webp",
+          "title": "谷雨",
+          "width": 750,
+          "height": 1125,
+          "sha256": "d6c085f8ee4b8c8ca316bfa44b0b92e362b94a9288ab47e274a1c564d5de2e2a"
+        },
+        {
+          "src": "assets/design/collections/typography-design/art-07.webp",
+          "title": "鲸落",
+          "width": 750,
+          "height": 1125,
+          "sha256": "2bd9a6b3622899561ffa75d12a2037e887cf498622b35a4026bb30e9f37ef085"
+        },
+        {
+          "src": "assets/design/collections/typography-design/art-08.webp",
+          "title": "青岛码头",
+          "width": 750,
+          "height": 1125,
+          "sha256": "72c64ee8a5c9fffe8cb38a771560d83b5087a2be30a5a4173878a90c7868a28e"
+        }
+      ]
+    },
+    {
+      "id": "sheep-gift",
+      "title": "岁启羊年 · 礼盒概念可视化",
+      "category": "branding",
+      "portfolioPages": [
+        9,
+        10,
+        11
+      ],
+      "pdf": "assets/design/collections/sheep-gift/collection.pdf",
+      "items": [
+        {
+          "src": "sheep-gift/images/visual-01.webp",
+          "title": "岁启羊年，以温柔为礼。 · 视觉示意 1",
+          "width": 698,
+          "height": 931,
+          "sha256": "ec244371ada937d73305a475679f1ca0cd1e386721fba66e45bd6cb475ba26ba"
+        },
+        {
+          "src": "sheep-gift/images/visual-02.webp",
+          "title": "岁启羊年，以温柔为礼。 · 视觉示意 2",
+          "width": 697,
+          "height": 931,
+          "sha256": "7a30e96ae52323bd7304bccc9384e5649ea84435d0dc2078822fa1628037e772"
+        },
+        {
+          "src": "sheep-gift/images/visual-03.webp",
+          "title": "岁启羊年，以温柔为礼。 · 视觉示意 3",
+          "width": 698,
+          "height": 933,
+          "sha256": "b4686aca73a26a4a3c84f59edeab7f2f927917ac736d913139f225b25dc0b3cc"
+        },
+        {
+          "src": "sheep-gift/images/visual-04.webp",
+          "title": "岁启羊年，以温柔为礼。 · 视觉示意 4",
+          "width": 698,
+          "height": 934,
+          "sha256": "8a1a15cdca48a5dec5d439a39270df651f9ae9d67902410488014a8f8dcee6c6"
+        },
+        {
+          "src": "sheep-gift/images/visual-05.webp",
+          "title": "岁启羊年，以温柔为礼。 · 视觉示意 5",
+          "width": 698,
+          "height": 933,
+          "sha256": "1148ea775517780fe82e142afb56185d1cf51f37c00f3da60add1856b954a12a"
+        },
+        {
+          "src": "sheep-gift/images/visual-06.webp",
+          "title": "岁启羊年，以温柔为礼。 · 视觉示意 6",
+          "width": 698,
+          "height": 933,
+          "sha256": "2ad7942a4fbd9b9a4f7c8112ca37ab3de3f6ce33f9a9ff1c5f9921756543bbe0"
+        },
+        {
+          "src": "sheep-gift/images/visual-07.webp",
+          "title": "岁启羊年，以温柔为礼。 · 视觉示意 7",
+          "width": 698,
+          "height": 934,
+          "sha256": "73c2454ac6edd183cc056fd84bc76138377d664c3d184d56dc86c57ae8c80f9c"
+        },
+        {
+          "src": "sheep-gift/images/visual-08.webp",
+          "title": "岁启羊年，以温柔为礼。 · 视觉示意 8",
+          "width": 665,
+          "height": 519,
+          "sha256": "6ddc2abc3ac6376fcb8f5f53dc0e5bc19dbd05c66eecc01e6a5c63db24b38d5f"
+        },
+        {
+          "src": "sheep-gift/images/visual-09.webp",
+          "title": "岁启羊年，以温柔为礼。 · 视觉示意 9",
+          "width": 698,
+          "height": 933,
+          "sha256": "5169dee8326ca82858a99704b0ec99344d55f704e58cfc3c964957d5885d5604"
+        },
+        {
+          "src": "assets/design/brand-assets/sheep-gift.webp",
+          "title": "岁启羊年 · 补充概念资产",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "cdd8f530e605c9e905c6c6f835c44cd80ad5450f534b6b3c6e4157bf20283abe"
+        }
+      ]
+    },
+    {
+      "id": "ressa-jewelry",
+      "title": "RESSA · 珠宝品牌可视化",
+      "category": "branding",
+      "portfolioPages": [
+        12,
+        13,
+        14
+      ],
+      "pdf": "assets/design/collections/ressa-jewelry/collection.pdf",
+      "items": [
+        {
+          "src": "ressa-jewelry/images/visual-01.webp",
+          "title": "RESSA 珠宝 · 视觉示意 1",
+          "width": 1600,
+          "height": 972,
+          "sha256": "f86dec5bc901db38d9b4b3adc1eb51da324ed0196f4458880db6ce9b59df08f2"
+        },
+        {
+          "src": "ressa-jewelry/images/visual-03.webp",
+          "title": "RESSA 珠宝 · 视觉示意 2",
+          "width": 1600,
+          "height": 1068,
+          "sha256": "975d72e0aa0b50a4736660e2cf04707acae6e2aae12634e76904af6fee345385"
+        },
+        {
+          "src": "ressa-jewelry/images/visual-04.webp",
+          "title": "RESSA 珠宝 · 视觉示意 3",
+          "width": 1600,
+          "height": 1074,
+          "sha256": "f24ad8a7cbb6a571b8dbdadbc6c0f6b6ddddaa38288b85b4a8a973e54f9cd1fa"
+        },
+        {
+          "src": "ressa-jewelry/images/visual-05.webp",
+          "title": "RESSA 珠宝 · 视觉示意 4",
+          "width": 1600,
+          "height": 961,
+          "sha256": "7a73c1e43bb0225dd2069f514531a4e65a95b4daf0bc2aa713484c1dba972101"
+        },
+        {
+          "src": "ressa-jewelry/images/visual-06.webp",
+          "title": "RESSA 珠宝 · 视觉示意 5",
+          "width": 1600,
+          "height": 1069,
+          "sha256": "e5cf07e02a80cadde2abad57b9e57568d8a8d622d8e9ff6ca3dacd6a9fa975a0"
+        },
+        {
+          "src": "ressa-jewelry/images/visual-07.webp",
+          "title": "RESSA 珠宝 · 视觉示意 6",
+          "width": 1600,
+          "height": 1020,
+          "sha256": "f4fa5763fe9967e8991909da19cb30b60df7d5f955f5469f36e1db8c051b4311"
+        },
+        {
+          "src": "ressa-jewelry/images/visual-08.webp",
+          "title": "RESSA 珠宝 · 视觉示意 7",
+          "width": 1600,
+          "height": 1121,
+          "sha256": "ceab9e1dd6806946deba83015885d7ed7e724ea7e2a8f2bdfb9218ae800517e5"
+        },
+        {
+          "src": "ressa-jewelry/images/visual-09.webp",
+          "title": "RESSA 珠宝 · 视觉示意 8",
+          "width": 1600,
+          "height": 1056,
+          "sha256": "a08066878600ebf3bed752919d05e8230ab7aeaeb05a64f45fc2536b38bb0b51"
+        },
+        {
+          "src": "ressa-jewelry/images/visual-10.webp",
+          "title": "RESSA 珠宝 · 视觉示意 9",
+          "width": 1600,
+          "height": 1068,
+          "sha256": "143f374687995cf139459e2b4a2cec28f6940d4557e740e04afc98f76df9e731"
+        },
+        {
+          "src": "ressa-jewelry/images/visual-11.webp",
+          "title": "RESSA 珠宝 · 视觉示意 10",
+          "width": 1600,
+          "height": 1019,
+          "sha256": "a4ec83178efa09244fbaa3c3626f7bac5475296b0ee94c1ec215a91ad94f608c"
+        },
+        {
+          "src": "ressa-jewelry/images/visual-12.webp",
+          "title": "RESSA 珠宝 · 视觉示意 11",
+          "width": 1600,
+          "height": 1020,
+          "sha256": "1abf56393b2195d887093042173b66a991689d0479c61321b91bf28682be929a"
+        },
+        {
+          "src": "ressa-jewelry/images/visual-13.webp",
+          "title": "RESSA 珠宝 · 视觉示意 12",
+          "width": 1600,
+          "height": 1068,
+          "sha256": "29990926798e772ed242d6c0198081eda5ebc7209679296747145a7ba4e66279"
+        },
+        {
+          "src": "ressa-jewelry/images/visual-14.webp",
+          "title": "RESSA 珠宝 · 视觉示意 13",
+          "width": 1600,
+          "height": 1068,
+          "sha256": "f6717159afc41ae4d54b649b5a086d63256228b84ddbfd671fb8edc5fa0ef021"
+        },
+        {
+          "src": "ressa-jewelry/images/visual-15.webp",
+          "title": "RESSA 珠宝 · 视觉示意 14",
+          "width": 1600,
+          "height": 1201,
+          "sha256": "9bd500e184416d59bcc57b67f654888317c3f4e153e5c1e45587e0218be93b0d"
+        },
+        {
+          "src": "ressa-jewelry/images/visual-16.webp",
+          "title": "RESSA 珠宝 · 视觉示意 15",
+          "width": 1600,
+          "height": 1104,
+          "sha256": "847b842f4163e111e07918fc475b278ac0bf3b735729532f5354ed192eeb6d4b"
+        },
+        {
+          "src": "assets/design/brand-assets/ressa-jewelry.webp",
+          "title": "RESSA · 补充概念资产",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "f34d381a186a2f2dc9480bc46ef310bf5486ad94e31803826fa15b2f9d913381"
+        }
+      ]
+    },
+    {
+      "id": "spiked-twist",
+      "title": "SPIKED TWIST · 饮品包装可视化",
+      "category": "branding",
+      "portfolioPages": [
+        15,
+        16,
+        17
+      ],
+      "pdf": "assets/design/collections/spiked-twist/collection.pdf",
+      "items": [
+        {
+          "src": "spiked-twist/images/visual-01.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 1",
+          "width": 1600,
+          "height": 1048,
+          "sha256": "7c619332c32146286c018c1019130dc9bf692f3e6d541a785ca5be2bb6fb5220"
+        },
+        {
+          "src": "spiked-twist/images/visual-02.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 2",
+          "width": 1600,
+          "height": 640,
+          "sha256": "0e8433aa31aabf2fe91f84191c64678b27e867055a652c89d6b7ee2c57625b8d"
+        },
+        {
+          "src": "spiked-twist/images/visual-03.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 3",
+          "width": 1600,
+          "height": 1069,
+          "sha256": "d39a1ce5df792b8fb48ca5a73bb3d410fbb133008958a9e56bc5025943774779"
+        },
+        {
+          "src": "spiked-twist/images/visual-04.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 4",
+          "width": 1572,
+          "height": 1112,
+          "sha256": "bb59039fba873735d1096fe8936704aa9a65a28654565022c049c31e707f1410"
+        },
+        {
+          "src": "spiked-twist/images/visual-05.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 5",
+          "width": 1600,
+          "height": 1069,
+          "sha256": "8f461fdde47d04b920d4930758db1b9f1ff73863c4940e8fae28fd354d51ce55"
+        },
+        {
+          "src": "spiked-twist/images/visual-06.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 6",
+          "width": 1600,
+          "height": 1068,
+          "sha256": "f341aefda61be2b319b96643227544bd470126b40f775f63481179c4f40a15cd"
+        },
+        {
+          "src": "spiked-twist/images/visual-07.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 7",
+          "width": 1600,
+          "height": 2167,
+          "sha256": "76835df747af9adcb6fd5c664b01fbb272463c042cb638ac5f36dccdaad3d2a2"
+        },
+        {
+          "src": "spiked-twist/images/visual-08.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 8",
+          "width": 1600,
+          "height": 533,
+          "sha256": "87131ae17a89e93f46cade4dc1bf80aa38bf700ebe04a78e48317aab66a24f5e"
+        },
+        {
+          "src": "spiked-twist/images/visual-09.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 9",
+          "width": 1600,
+          "height": 1069,
+          "sha256": "7e1e6cc557087074de04b8f3a803748f74c5040db6ec484ae2558eefa70af786"
+        },
+        {
+          "src": "spiked-twist/images/visual-10.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 10",
+          "width": 1600,
+          "height": 1068,
+          "sha256": "b05e0da15728de42298d17d5559793d8569cf2f4ef16e0103babd5e9d3f76b9a"
+        },
+        {
+          "src": "spiked-twist/images/visual-11.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 11",
+          "width": 1600,
+          "height": 1069,
+          "sha256": "c0fbe60dbe53f3001d314fd0dd260fb842f76465782e2b2db2aa631b7e631f08"
+        },
+        {
+          "src": "spiked-twist/images/visual-12.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 12",
+          "width": 1600,
+          "height": 1068,
+          "sha256": "7b76a00b9b900e898d0e621ec2075e307b2ffb32d1f7789287f6660e9a237001"
+        },
+        {
+          "src": "spiked-twist/images/visual-13.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 13",
+          "width": 1600,
+          "height": 1126,
+          "sha256": "540fe2459e429193bf4ea2f4ae8a47f6428fe23266ccf555eeeafb23635d651d"
+        },
+        {
+          "src": "spiked-twist/images/visual-14.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 14",
+          "width": 1600,
+          "height": 1068,
+          "sha256": "38799e87abb338d0fa15bfc3affe7a4c66776c12849788852823e92902b32a89"
+        },
+        {
+          "src": "spiked-twist/images/visual-15.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 15",
+          "width": 1600,
+          "height": 533,
+          "sha256": "8ce0d38b611d2f15ce8db94d47ca1a71cf7bb3246bd3b35f401b59955fa0fbe8"
+        },
+        {
+          "src": "spiked-twist/images/visual-16.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 16",
+          "width": 1600,
+          "height": 1069,
+          "sha256": "364f588fe26521f29f233a19bae01bbaee4d96bd606d465a3b9818c419284716"
+        },
+        {
+          "src": "spiked-twist/images/visual-17.webp",
+          "title": "SPIKED TWIST 果味饮品 · 视觉示意 17",
+          "width": 1600,
+          "height": 714,
+          "sha256": "d36166a6eeb158cfb6a3a6b5686ed93c31994726f268856984f66670a9bef5eb"
+        },
+        {
+          "src": "assets/design/brand-assets/spiked-twist.webp",
+          "title": "SPIKED TWIST · 补充概念资产",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "fb9e0a58fb12143d0970731798d8b443e9309d9e483f0ca22aaf7a78ea13a812"
+        }
+      ]
+    },
+    {
+      "id": "oliva-club",
+      "title": "OLIVA CLUB · 橄榄油品牌可视化",
+      "category": "branding",
+      "portfolioPages": [
+        18,
+        19,
+        20
+      ],
+      "pdf": "assets/design/collections/oliva-club/collection.pdf",
+      "items": [
+        {
+          "src": "oliva-club/images/visual-01.webp",
+          "title": "OLIVA CLUB 橄榄油 · 视觉示意 1",
+          "width": 1574,
+          "height": 1003,
+          "sha256": "461974e5d74682d9c26cc4525bdf51596216375f46466d3bda15cd62410c2df1"
+        },
+        {
+          "src": "oliva-club/images/visual-02.webp",
+          "title": "OLIVA CLUB 橄榄油 · 视觉示意 2",
+          "width": 1573,
+          "height": 1575,
+          "sha256": "2cd02d4b9e715fd4362b5c96e19dc2db2df780358821b922118cb31c58c4ff1a"
+        },
+        {
+          "src": "oliva-club/images/visual-03.webp",
+          "title": "OLIVA CLUB 橄榄油 · 视觉示意 3",
+          "width": 1574,
+          "height": 883,
+          "sha256": "2cd4800665597126326ada2575ba7691c5a01e84560765e7dff190f3f243f800"
+        },
+        {
+          "src": "oliva-club/images/visual-04.webp",
+          "title": "OLIVA CLUB 橄榄油 · 视觉示意 4",
+          "width": 1574,
+          "height": 942,
+          "sha256": "a047fc9da0e895dc895b616dbe22685dd7547563b5d3a76a0386122dfb5f7a09"
+        },
+        {
+          "src": "oliva-club/images/visual-05.webp",
+          "title": "OLIVA CLUB 橄榄油 · 视觉示意 5",
+          "width": 1573,
+          "height": 879,
+          "sha256": "48a42ab48abce75d4fddcf7d9b5f361f8a2e4d222b970e0c1c3960f104879eb0"
+        },
+        {
+          "src": "oliva-club/images/visual-06.webp",
+          "title": "OLIVA CLUB 橄榄油 · 视觉示意 6",
+          "width": 1574,
+          "height": 947,
+          "sha256": "69c3fde1d9852363d00326076d0a5cfea0c08c3f7f965f39bcd0b05dd903f34d"
+        },
+        {
+          "src": "oliva-club/images/visual-07.webp",
+          "title": "OLIVA CLUB 橄榄油 · 视觉示意 7",
+          "width": 1574,
+          "height": 939,
+          "sha256": "ceb50d8be2b8144582ada6026bfe1190e96039e9a09ab477aa00a793fc54b8b0"
+        },
+        {
+          "src": "oliva-club/images/visual-08.webp",
+          "title": "OLIVA CLUB 橄榄油 · 视觉示意 8",
+          "width": 1573,
+          "height": 477,
+          "sha256": "696a527982a16efcff05d530865729a06e743c73bbac8b0c2472167bb0a25dcb"
+        },
+        {
+          "src": "oliva-club/images/visual-09.webp",
+          "title": "OLIVA CLUB 橄榄油 · 视觉示意 9",
+          "width": 1574,
+          "height": 938,
+          "sha256": "663ba588e69498362a2c90b624783015150686b4a7c84e2dfd7576059ccdb608"
+        },
+        {
+          "src": "oliva-club/images/visual-10.webp",
+          "title": "OLIVA CLUB 橄榄油 · 视觉示意 10",
+          "width": 1574,
+          "height": 951,
+          "sha256": "65b6cc40674788d0aec177e555f87f522e1cd21e2a011672f1e709cd52a433d4"
+        },
+        {
+          "src": "oliva-club/images/visual-11.webp",
+          "title": "OLIVA CLUB 橄榄油 · 视觉示意 11",
+          "width": 1574,
+          "height": 938,
+          "sha256": "80d6b4f44c5e53d5510b8ea7494934798961bf4c0245b2cfb687b110fafd3c7b"
+        },
+        {
+          "src": "assets/design/brand-assets/oliva-club.webp",
+          "title": "OLIVA CLUB · 补充概念资产",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "50d46fbc776e9742d18666f8960edf685fff50ccbee620271ce5fadb12e03296"
+        }
+      ]
+    }
+  ]
+}
