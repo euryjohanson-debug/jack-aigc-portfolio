@@ -20,3 +20,9 @@ if(fs.existsSync(manifestPath)){
  for(const expected of manifest.projects){const actual=c.window.designProjects.find(p=>p.id===expected.id);const items=actual.sections.flatMap(s=>s.items);if(actual.title!==expected.title||JSON.stringify(items.map(x=>[x.src,x.title]))!==JSON.stringify(expected.items.map(x=>[x.src,x.title])))throw Error('Design selection differs from PDF manifest: '+expected.id);for(const item of expected.items)if(hash(item.src)!==item.sha256)throw Error('Artwork changed: update PDF and website together: '+item.src);}
  console.log('Verified design selection and asset hashes against the final PDF edition.');
 }
+
+// Raster artwork is delivered as WebP; original JPG/PNG files stay outside dist.
+function checkImageFormats(dir){for(const item of fs.readdirSync(dir,{withFileTypes:true})){const file=path.join(dir,item.name);if(item.isDirectory())checkImageFormats(file);else if(/\.(?:png|jpe?g)$/i.test(item.name))throw Error('Unoptimized raster image in site: '+path.relative(root,file));}}
+checkImageFormats(root);
+for(const leaf of ['plane','maple','ginkgo','lotus'])exists('assets/leaves/'+leaf+'.webp');
+console.log('Verified WebP-only raster images and all four leaf silhouette masks.');

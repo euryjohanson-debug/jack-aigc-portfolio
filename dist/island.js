@@ -9,7 +9,7 @@
  ];
  for(const item of destinations){
   const hotspot=document.querySelector('.capabilities '+item.selector);
-  hotspot.innerHTML='<a class="hotspot-link leaf-'+item.leaf+'" href="'+item.url+'" aria-label="浏览'+item.title+'"><img class="island-leaf" src="assets/leaves/'+item.leaf+'.webp" alt="" aria-hidden="true" width="320" height="320"><span>'+item.title+'<small>'+item.en+'</small></span></a>';
+  hotspot.innerHTML='<a class="hotspot-link leaf-'+item.leaf+'" href="'+item.url+'" aria-label="浏览'+item.title+'"><i class="island-leaf" aria-hidden="true"></i><span>'+item.title+'<small>'+item.en+'</small></span></a>';
  }
  document.getElementById('cap-description').textContent='选择一片叶子，走进对应的作品世界。';
  window.goToIslandMap=()=>window.scrollTo({top:document.getElementById('story').offsetHeight-innerHeight,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
@@ -37,7 +37,7 @@
   }
   const type=['video','design'].includes(params.get('type'))?params.get('type'):'all';
   if(type==='all'){
-   document.getElementById('inner-page').innerHTML='<span class="chip">CHOOSE YOUR WORLD</span><h1 class="page-title">选择一种表达。</h1><p class="page-intro">动态影像与静态设计，各自展开。</p><div class="portfolio-worlds"><a class="portfolio-world video-world" href="#/works?type=video"><video class="world-motion" src="assets/navigation/plant-growth.mp4" poster="assets/navigation/plant-growth.jpg" muted loop playsinline preload="none" aria-hidden="true"></video><div><span class="eyebrow">STORIES IN MOTION</span><h2>AI 视频</h2><p>剧集、创意短片与商业广告</p><span class="world-enter">进入动态作品</span></div></a><a class="portfolio-world design-world" href="#/works?type=design"><img src="assets/navigation/static-moss.webp" alt="苔藓与植物构成的绿色设计作品入口"><div><span class="eyebrow">VISUAL CREATIVE PORTFOLIO</span><h2>设计作品</h2><p>品牌、电商与视觉表达</p><span class="world-enter">进入静态作品</span></div></a></div><a class="back-to-island" href="#/">回到浮岛</a>';
+   document.getElementById('inner-page').innerHTML='<span class="chip">CHOOSE YOUR WORLD</span><h1 class="page-title">选择一种表达。</h1><p class="page-intro">动态影像与静态设计，各自展开。</p><div class="portfolio-worlds"><a class="portfolio-world video-world" href="#/works?type=video"><video class="world-motion" src="assets/navigation/plant-growth.mp4" poster="assets/navigation/plant-growth.webp" muted loop playsinline preload="none" aria-hidden="true"></video><div><span class="eyebrow">STORIES IN MOTION</span><h2>AI 视频</h2><p>剧集、创意短片与商业广告</p><span class="world-enter">进入动态作品</span></div></a><a class="portfolio-world design-world" href="#/works?type=design"><img src="assets/navigation/static-moss.webp" alt="苔藓与植物构成的绿色设计作品入口"><div><span class="eyebrow">VISUAL CREATIVE PORTFOLIO</span><h2>设计作品</h2><p>品牌、电商与视觉表达</p><span class="world-enter">进入静态作品</span></div></a></div><a class="back-to-island" href="#/">回到浮岛</a>';
    const motion=document.querySelector('.world-motion');if(motion&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&!navigator.connection?.saveData){worldObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.play().catch(()=>{});else e.target.pause();}),{threshold:.1});worldObserver.observe(motion);}
    window.scrollTo({top:0,behavior:'instant'});return;
   }
