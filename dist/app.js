@@ -22,46 +22,4 @@ function route(){let r=location.hash.replace('#/','')||'home';if(r==='works-home
 window.addEventListener('hashchange',()=>{if(location.hash==='#works-home'||location.hash==='#island-map'){location.hash='#/';requestAnimationFrame(()=>window.goToIslandMap?.());return}route()});route();$('.menu').onclick=()=>{const open=$('header').classList.toggle('menu-open');$('.menu').setAttribute('aria-expanded',open)};
 const descriptions=['从项目需求出发，组织核心创意、脚本与分镜，确定内容方向。','建立人物、场景与产品的视觉语言，保持风格与资产一致。','根据分镜组织AI生成与镜头衔接，让视觉服务于内容表达。','通过剪辑、声音与画面调整，将各环节整合为完整成品。'];$$('[data-cap]').forEach(b=>b.onclick=()=>{$$('[data-cap]').forEach(x=>x.setAttribute('aria-expanded',x===b&&b.getAttribute('aria-expanded')!=='true'));$('#cap-description').textContent=descriptions[+b.dataset.cap]});
 const dialog=$('#project-dialog');document.addEventListener('click',e=>{const card=e.target.closest('[data-project]');if(!card)return;const p=projects.find(x=>x.id===card.dataset.project);$('#dialog-content').innerHTML=`<span class="chip">${p.type==='video'?'VIDEO PROJECT':'DESIGN PROJECT'} / 页面结构预览</span><h2>${p.title}</h2><p>${p.description}</p><div class="dialog-art">${p.type==='video'?'完整成片播放位置':'设计主视觉与PDF阅读位置'} · 素材待添加</div><div class="detail-grid"><section><h3>项目概况</h3><p>项目需求、类型与个人职责。<br>此处将在选片后填写真实内容。</p></section><section><h3>核心创意</h3><p>简洁说明创意方向与视觉思路，让招聘方快速理解项目。</p></section><section><h3>关键制作过程</h3><p>精选分镜、资产或前后对比，展示具体制作方法。</p></section><section><h3>最终交付</h3><p>${p.type==='video'?'完整视频与相关版本。':'系列设计与完整PDF阅读、下载。'}素材添加后启用。</p></section></div>`;dialog.showModal()});$('.close').onclick=()=>dialog.close();dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});
-// Decode short reference clip once; scrub cached images with scroll rather than seeking on every event.
-const video=$('#fly'),canvas=$('#scene'),ctx=canvas.getContext('2d');let frames=[],want=0,shown=-1,busy=false,nf=121,sp=0,mx=0,my=0,sx=0,sy=0,last=0;
-const clamp=n=>Math.max(0,Math.min(1,n)),seg=(p,a,b)=>clamp((p-a)/(b-a)),ease=t=>t<.5?4*t*t*t:1-(-2*t+2)**3/2;
-function resize(){const w=canvas.clientWidth,h=canvas.clientHeight;if(!w||!h)return;const d=Math.min(devicePixelRatio,1.3),cw=Math.round(w*d),ch=Math.round(h*d);if(canvas.width===cw&&canvas.height===ch)return;canvas.width=cw;canvas.height=ch;shown=-1;drawWant()}window.addEventListener('resize',resize);new ResizeObserver(resize).observe(canvas);resize();
-function nearest(){for(let i=0;i<nf;i++){if(frames[want-i])return want-i;if(frames[want+i])return want+i}return -1}
-function drawWant(){
- if(!ctx||(!frames[0]&&want===0))return;
- const n=nearest();if(n<0||n===shown||(shown>=0&&Math.abs(n-want)>2))return;
- const img=frames[n],k=Math.max(canvas.width/(img.naturalWidth||img.width),canvas.height/(img.naturalHeight||img.height));
- const iw=img.naturalWidth||img.width,ih=img.naturalHeight||img.height;ctx.drawImage(img,(canvas.width-iw*k)/2,(canvas.height-ih*k)/2,iw*k,ih*k);shown=n;canvas.dataset.frame=String(n);
-}
-// Pre-extracted original camera move: independent of autoplay and video seeking.
-nf=61;frames=new Array(nf);
-// Keep only the first frame and a small window around the requested camera frame.
-const loadingFrames=new Set(),failedFrames=new Set();let frameTargets=new Set([0]),lastFrameTarget=-1;
-function requestFrameWindow(index){
- if(index!==lastFrameTarget){lastFrameTarget=index;frameTargets=new Set([0]);if(index>0)for(let i=Math.max(0,index-6);i<=Math.min(nf-1,index+6);i++)frameTargets.add(i);
-  for(let i=0;i<nf;i++)if(frames[i]&&!frameTargets.has(i)){frames[i].close?.();frames[i]=undefined;}
- }
- canvas.dataset.cachedFrames=String(frames.filter(Boolean).length);pumpFrames();
-}
-function pumpFrames(){
- if($('#home-page').hidden||document.hidden)return;
- const queue=[...frameTargets].filter(i=>!frames[i]&&!loadingFrames.has(i)&&!failedFrames.has(i)).sort((a,b)=>Math.abs(a-want)-Math.abs(b-want));
- while(loadingFrames.size<2&&queue.length){
-  const index=queue.shift();loadingFrames.add(index);const img=new Image();img.decoding='async';
-  img.onload=async()=>{
-   let frame=img;
-   try{if(window.createImageBitmap)frame=await createImageBitmap(img,{resizeWidth:960,resizeHeight:542,resizeQuality:'high'});}catch{}
-   if(frameTargets.has(index)){frames[index]=frame;drawWant();document.documentElement.classList.add('island-ready');}else frame.close?.();
-   loadingFrames.delete(index);pumpFrames();
-  };
-  img.onerror=()=>{failedFrames.add(index);loadingFrames.delete(index);pumpFrames();};
-  img.src='assets/island-frames/frame-'+String(index+1).padStart(3,'0')+'.webp';
- }
-}
-requestFrameWindow(0);
-window.addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
-const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-function visibility(el,k,transform){el.style.opacity=k;el.style.visibility=k>.005?'visible':'hidden';el.style.pointerEvents=k>.2?'auto':'none';if(transform)el.style.transform=transform}
-function animate(now){requestAnimationFrame(animate);const dt=Math.min(64,now-last||16.7);last=now;if(!$('#home-page').hidden){const r=$('#story').getBoundingClientRect();let p=clamp(-r.top/($('#story').offsetHeight-innerHeight));sp+=(p-sp)*(reduced?1:1-Math.pow(.86,dt/16.7));sx+=(mx-sx)*.06;sy+=(my-sy)*.06;let vp=ease(seg(sp,.05,.69));const ambient=(reduced?0:1)*(1-seg(sp,.04,.16));want=Math.round(vp*(nf-1));requestFrameWindow(want);drawWant();canvas.dataset.motion=sp>.02?"scroll":"opening";const floatX=Math.sin(now/1700)*10*ambient,floatY=Math.sin(now/1250)*14*ambient;const transform=`translate3d(${-sx*18+floatX}px,${-sy*12+(1-vp)*innerHeight*.06+floatY}px,0) scale(${shown<0?1+vp*.65:1+.02*(1-vp)})`;$$('.camera').forEach(x=>x.style.transform=transform);let ho=shown<0?0:shown===0?seg(sp,.06,.105):1;$('.plate').style.opacity=1-ho;$('.front').style.opacity=1-ho;let h=seg(sp,.02,.12);$$('.opening').forEach(x=>{visibility(x,1-h);if(!x.classList.contains('scroll-hint'))x.style.filter=`blur(${h*12}px)`});$('.hero-copy').style.transform=`translateY(${-h*80}px) scale(${1+h*.06})`;const v=seg(sp,.17,.27)*(1-seg(sp,.35,.43));visibility($('.vision'),v,`translate(-50%,${-50-(1-v)*12}%)`);$('.vision').style.filter=`blur(${(1-v)*10}px)`;const cap=seg(sp,.43,.53);visibility($('.capabilities'),cap);window.updateIslandNavigation?.(sp);let end=0;visibility($('.closing'),end,`translateY(${(1-end)*45}px)`);$('.story-progress span').style.transform=`scaleX(${sp})`;$('header').classList.toggle('solid',scrollY>innerHeight*.65);$('.skip').style.opacity=1-seg(sp,.43,.53)}}requestAnimationFrame(animate);
-
-
+// Floating-island rendering is managed by island-motion.js.
