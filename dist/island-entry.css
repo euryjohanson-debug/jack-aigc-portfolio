@@ -8,11 +8,11 @@
 .island-plus{position:relative;display:block;width:32px;height:32px;flex:0 0 32px;border:1px solid var(--entry-edge);border-radius:50%;background:var(--entry-color);color:var(--entry-ink);box-shadow:0 2px 7px #10291a18,inset 0 1px 0 #ffffff30;transition:transform .2s,box-shadow .2s;pointer-events:none}
 .island-plus:before,.island-plus:after{content:'';position:absolute;left:50%;top:50%;width:13px;height:1.5px;border-radius:1px;background:currentColor;transform:translate(-50%,-50%)}
 .island-plus:after{transform:translate(-50%,-50%) rotate(90deg)}
-/* iPhone 18 Pro finish-inspired interface colors, adjusted for contrast on the island. */
-.entry-plane{--entry-color:#343638;--entry-edge:#252729;--entry-ink:#fafafa}
-.entry-maple{--entry-color:#713e4d;--entry-edge:#603241;--entry-ink:#fff5f7}
-.entry-ginkgo{--entry-color:#afc6cd;--entry-edge:#8fa9b2;--entry-ink:#203d46}
-.entry-lotus{--entry-color:#e3e4e1;--entry-edge:#afb4b1;--entry-ink:#3c4541}
+/* Silver gray, mint, grass green and pale pink with readable plus marks. */
+.entry-plane{--entry-color:#d9dddf;--entry-edge:#a6afb3;--entry-ink:#3c484e}
+.entry-maple{--entry-color:#bce4d5;--entry-edge:#86b9a4;--entry-ink:#285b48}
+.entry-ginkgo{--entry-color:#a3c968;--entry-edge:#789c43;--entry-ink:#344e1e}
+.entry-lotus{--entry-color:#efd0d9;--entry-edge:#c69ba9;--entry-ink:#744553}
 .hotspot-link span{font-size:18px;padding:13px 17px;background:rgba(247,248,240,.8);border:1px solid #ffffff94;border-radius:6px;box-shadow:0 5px 22px #1b352015;transition:background .25s,transform .25s}
 .hotspot-link small{font-size:10px;letter-spacing:1.1px;padding-top:7px}
 .hotspot-link:hover .island-plus,.hotspot-link:focus-visible .island-plus{transform:translateY(-2px);box-shadow:0 4px 10px #10291a24,inset 0 1px 0 #ffffff40}
