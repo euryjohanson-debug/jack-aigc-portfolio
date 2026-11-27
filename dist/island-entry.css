@@ -5,15 +5,17 @@
 .island-home .closing{display:none!important}
 .island-home{overscroll-behavior-y:none}
 .hotspot-link{gap:10px;min-height:52px;padding:4px;border-radius:12px}
-.island-leaf{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border:1px solid #36543c99;border-radius:50%;background:#f6f7f4b8;color:#214332;box-shadow:0 2px 8px #10291a14;transition:transform .2s,background .2s;pointer-events:none}
-.island-leaf:before{content:'';display:block;width:27px;height:27px;background:currentColor;-webkit-mask:var(--leaf-mask) center/contain no-repeat;mask:var(--leaf-mask) center/contain no-repeat}
-.leaf-plane{--leaf-mask:url('assets/leaves/plane.webp')}
-.leaf-maple{--leaf-mask:url('assets/leaves/maple.webp')}
-.leaf-ginkgo{--leaf-mask:url('assets/leaves/ginkgo.webp')}
-.leaf-lotus{--leaf-mask:url('assets/leaves/lotus.webp')}
+.island-plus{position:relative;display:block;width:32px;height:32px;flex:0 0 32px;border:1px solid var(--entry-edge);border-radius:50%;background:var(--entry-color);color:var(--entry-ink);box-shadow:0 2px 7px #10291a18,inset 0 1px 0 #ffffff30;transition:transform .2s,box-shadow .2s;pointer-events:none}
+.island-plus:before,.island-plus:after{content:'';position:absolute;left:50%;top:50%;width:13px;height:1.5px;border-radius:1px;background:currentColor;transform:translate(-50%,-50%)}
+.island-plus:after{transform:translate(-50%,-50%) rotate(90deg)}
+/* iPhone 18 Pro finish-inspired interface colors, adjusted for contrast on the island. */
+.entry-plane{--entry-color:#343638;--entry-edge:#252729;--entry-ink:#fafafa}
+.entry-maple{--entry-color:#713e4d;--entry-edge:#603241;--entry-ink:#fff5f7}
+.entry-ginkgo{--entry-color:#afc6cd;--entry-edge:#8fa9b2;--entry-ink:#203d46}
+.entry-lotus{--entry-color:#e3e4e1;--entry-edge:#afb4b1;--entry-ink:#3c4541}
 .hotspot-link span{font-size:18px;padding:13px 17px;background:rgba(247,248,240,.8);border:1px solid #ffffff94;border-radius:6px;box-shadow:0 5px 22px #1b352015;transition:background .25s,transform .25s}
 .hotspot-link small{font-size:10px;letter-spacing:1.1px;padding-top:7px}
-.hotspot-link:hover .island-leaf,.hotspot-link:focus-visible .island-leaf{transform:translateY(-2px);background:#eff5e4}
+.hotspot-link:hover .island-plus,.hotspot-link:focus-visible .island-plus{transform:translateY(-2px);box-shadow:0 4px 10px #10291a24,inset 0 1px 0 #ffffff40}
 .hotspot-link:hover span,.hotspot-link:focus-visible span{background:rgba(255,254,243,.9);transform:translateX(3px)}
 .h1{left:28%;top:60%}.h2{left:43%;top:43%}.h3{left:57%;top:68%}.h4{left:66%;right:auto;top:48%}
 .portfolio-worlds{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:48px}
@@ -26,10 +28,10 @@
 .contact-modal{max-width:600px;padding:44px 36px;border:1px solid #c1cfb6}.contact-modal h2{margin:14px 0;font-size:32px}.contact-modal .contact-row{gap:20px;align-items:baseline}.contact-modal .contact-row>span{flex-shrink:0;color:var(--ink2);font-size:14px}.contact-modal .contact-values{gap:10px;min-width:0}.contact-modal a{overflow-wrap:anywhere}.contact-modal .contact-row a:hover{color:#527b2a}.contact-modal .contact-modal-intro{margin-bottom:28px}.contact-modal .contact-row:last-child{padding-bottom:0}.contact-modal .close{min-width:44px;min-height:44px}
 html:has(dialog[open]){overflow:hidden}
 @media(max-width:820px){
- .island-leaf{width:36px;height:36px;flex-basis:36px}.island-leaf:before{width:23px;height:23px}.hotspot-link{gap:6px;padding:2px;min-height:48px}.hotspot-link span{font-size:15px;padding:10px 12px}.hotspot-link small{font-size:8px;letter-spacing:.4px;padding-top:5px}
+ .island-plus{width:28px;height:28px;flex-basis:28px}.island-plus:before,.island-plus:after{width:12px;height:1.5px}.hotspot-link{gap:6px;padding:2px;min-height:48px}.hotspot-link span{font-size:15px;padding:10px 12px}.hotspot-link small{font-size:8px;letter-spacing:.4px;padding-top:5px}
  .h1{left:12%;top:53%}.h2{left:42%;top:42%}.h3{left:43%;top:64%}.h4{left:14%;right:auto;top:75%}.cap-copy{top:12%}.cap-copy h2{font-size:26px}.cap-copy .chip{font-size:8px}#cap-description{display:none}
  .portfolio-worlds{grid-template-columns:1fr;margin-top:32px;gap:20px}.portfolio-world{min-height:300px;padding:28px}.portfolio-world h2{font-size:34px}
  .contact-modal{width:calc(100% - 24px);padding:40px 22px 30px}.contact-modal h2{font-size:28px}.contact-modal .contact-row{gap:12px;font-size:15px}.contact-modal .contact-values{font-size:14px}.contact-invite-title{font-size:28px}
 }
-@media(max-width:380px){.island-leaf{width:32px;height:32px;flex-basis:32px}.island-leaf:before{width:21px;height:21px}.hotspot-link span{font-size:14px;padding:9px}.hotspot-link small{font-size:7px}.h2{left:40%}.h3{left:36%}}
-@media(prefers-reduced-motion:reduce){.island-leaf,.hotspot-link span,.portfolio-world{transition:none}.hotspot-link:hover .island-leaf,.hotspot-link:focus-visible .island-leaf{transform:none}}
+@media(max-width:380px){.island-plus{width:26px;height:26px;flex-basis:26px}.island-plus:before,.island-plus:after{width:11px;height:1.5px}.hotspot-link span{font-size:14px;padding:9px}.hotspot-link small{font-size:7px}.h2{left:40%}.h3{left:36%}}
+@media(prefers-reduced-motion:reduce){.island-plus,.hotspot-link span,.portfolio-world{transition:none}.hotspot-link:hover .island-plus,.hotspot-link:focus-visible .island-plus{transform:none}}

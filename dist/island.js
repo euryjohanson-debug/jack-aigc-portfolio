@@ -9,9 +9,9 @@
  ];
  for(const item of destinations){
   const hotspot=document.querySelector('.capabilities '+item.selector);
-  hotspot.innerHTML='<a class="hotspot-link leaf-'+item.leaf+'" href="'+item.url+'" aria-label="浏览'+item.title+'"><i class="island-leaf" aria-hidden="true"></i><span>'+item.title+'<small>'+item.en+'</small></span></a>';
+  hotspot.innerHTML='<a class="hotspot-link entry-'+item.leaf+'" href="'+item.url+'" aria-label="浏览'+item.title+'"><i class="island-plus" aria-hidden="true"></i><span>'+item.title+'<small>'+item.en+'</small></span></a>';
  }
- document.getElementById('cap-description').textContent='选择一片叶子，走进对应的作品世界。';
+ document.getElementById('cap-description').textContent='点击「＋」，探索不同的创作方向。';
  window.goToIslandMap=()=>window.scrollTo({top:document.getElementById('story').offsetHeight-innerHeight,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
  document.addEventListener('click',e=>{const a=e.target.closest('a[href="#island-map"]');if(!a)return;e.preventDefault();window.goToIslandMap();});
  window.updateIslandNavigation=()=>{document.querySelector('.capabilities').inert=Number(document.querySelector('.capabilities').style.opacity)<.2;};
