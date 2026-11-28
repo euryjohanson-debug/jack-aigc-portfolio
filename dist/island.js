@@ -25,6 +25,18 @@
   document.querySelector('nav a[data-route="works"]').setAttribute('href',isHome?'#island-map':'#/works');
   document.querySelectorAll('dialog[open]').forEach(d=>d.close());
   document.body.classList.toggle('design-mode',name==='works'&&new URLSearchParams(query).get('type')==='design');
+  if(name==='apps'){
+   document.getElementById('home-page').hidden=true;
+   const page=document.getElementById('inner-page');
+   page.hidden=false;
+   page.innerHTML=`<span class="chip">APP DESIGN & DEVELOPMENT</span><h1 class="page-title">让创意，成为可用的工具。</h1><p class="page-intro">从界面设计到交互实现，把实际需求做成手机里的应用。</p><article class="app-showcase"><a class="app-cover-link" href="tietiekan/" aria-label="进入贴贴看官网，下载安卓测试版"><img src="assets/apps/tietiekan-cover.webp" alt="贴贴看视觉设计展示，包含蓝白风格官网、叠纸图标与手机编辑界面" width="1672" height="941" fetchpriority="high"></a><div class="app-showcase-copy"><div class="app-showcase-title"><img src="tietiekan/icon.svg" alt=""><div><h2>贴贴看</h2><p>门贴效果预演 · Android 应用</p></div></div><a class="app-showcase-open" href="tietiekan/">进入官网 · 下载试用</a></div></article><p class="app-showcase-note">选择门面照片，添加海报，调整透视后保存效果图。手机端本地处理，免费导出，无水印。安卓 10 及以上可下载测试版；上方画面为视觉设计示意。</p><a class="text-link" href="#/works">返回作品集</a>`;
+   document.querySelector('header').classList.remove('menu-open');
+   document.querySelector('header').classList.add('solid');
+   document.querySelector('.menu').setAttribute('aria-expanded','false');
+   document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('active',a.dataset.route==='apps'));
+   window.scrollTo({top:0,behavior:'instant'});
+   return;
+  }
   if(name!=='works'&&name!=='about'){baseRoute();return;}
   const params=new URLSearchParams(query);
   document.getElementById('home-page').hidden=true;document.getElementById('inner-page').hidden=false;
@@ -38,6 +50,7 @@
   const type=['video','design'].includes(params.get('type'))?params.get('type'):'all';
   if(type==='all'){
    document.getElementById('inner-page').innerHTML='<span class="chip">CHOOSE YOUR WORLD</span><h1 class="page-title">选择一种表达。</h1><p class="page-intro">动态影像与静态设计，各自展开。</p><div class="portfolio-worlds"><a class="portfolio-world video-world" href="#/works?type=video"><video class="world-motion" src="assets/navigation/plant-growth.mp4" poster="assets/navigation/plant-growth.webp" muted loop playsinline preload="none" aria-hidden="true"></video><div><span class="eyebrow">STORIES IN MOTION</span><h2>AI 视频</h2><p>剧集、创意短片与商业广告</p><span class="world-enter">进入动态作品</span></div></a><a class="portfolio-world design-world" href="#/works?type=design"><img src="assets/navigation/static-moss.webp" alt="苔藓与植物构成的绿色设计作品入口"><div><span class="eyebrow">VISUAL CREATIVE PORTFOLIO</span><h2>设计作品</h2><p>品牌、电商与视觉表达</p><span class="world-enter">进入静态作品</span></div></a></div><a class="back-to-island" href="#/">回到浮岛</a>';
+   document.querySelector('.portfolio-worlds').insertAdjacentHTML('beforeend','<a class="portfolio-world apps-world" href="#/apps"><img src="tietiekan/storefront.webp" alt="玻璃门上的蓝白海报，贴贴看门贴效果示意" loading="lazy"><div><span class="eyebrow">APP DESIGN & DEVELOPMENT</span><h2>应用作品</h2><p>贴贴看 · 门贴效果预演</p><span class="world-enter">浏览应用作品</span></div></a>');
    const motion=document.querySelector('.world-motion');if(motion&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&!navigator.connection?.saveData){worldObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.play().catch(()=>{});else e.target.pause();}),{threshold:.1});worldObserver.observe(motion);}
    window.scrollTo({top:0,behavior:'instant'});return;
   }
@@ -49,5 +62,7 @@
  };
  route();
 })();
+
+
 
 
